@@ -1,6 +1,7 @@
 #--------------------------------ASPECTOS_TECNICOS------------------------------
 from os import system, name
 from time import sleep
+from cryptography.fernet import Fernet
 
 
 def clear():
@@ -15,12 +16,7 @@ def clear():
     else:
         _ = system('clear')
 
-try:
-    from cryptography.fernet import Fernet
-except ModuleNotFoundError:
-    system("gnome-terminal -e 'bash -c \"sudo pip3 install cryptography; exec bash\"'")
-    clear()
-    raise SystemExit
+
 """
 El tipo de encriptación Fernet toma un mensaje codificado a bytes, el tiempo
 actual y una llave de 256 bits, retornando un toquen que es una representación
