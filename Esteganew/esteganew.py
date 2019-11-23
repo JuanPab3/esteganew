@@ -50,7 +50,7 @@ def enCRYptar(mensaje):
     """
     Esta se encarga de recibir un mensaje de tipo str, y a partir de la función
     'llave()', procesos de codificación nativos de python y el modulo de
-    encriptación 'Feret' de la librería 'cryptography.fernet'
+    encriptación 'Feret' de la librería 'cryptography.fernet'.
 
     Args:
         mensaje (str): es el mensaje que va a ser encriptado.
@@ -274,7 +274,7 @@ class Esteganew:
     def decodificar(self):
         """
         Esta función cumple la labor de retornar el mensaje oculto dentro de
-        la imagen.
+        una imagen ya codificada.
         """
         if (self.mensaje != None):
             raise Exception("No necesitas un mensaje si quieres decodificar.")
